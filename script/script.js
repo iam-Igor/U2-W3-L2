@@ -12,6 +12,7 @@ const saveName = function () {
   localStorage.setItem("saved", namevalue);
 
   previousName.innerText = localStorage.getItem("saved");
+
   nameInputField.value = "";
 };
 
@@ -28,6 +29,8 @@ const deleteItem = function () {
 };
 
 deleteButton.addEventListener("click", deleteItem);
+
+previousName.innerText = localStorage.getItem("saved");
 
 // ESERCIZIO 2
 
