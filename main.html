@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOCAL STORAGE</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <h1>Form di registrazione</h1>
+        <p id="previous-name"></p>
+        <form>
+          <input
+            type="text"
+            placeholder="Inserisci il tuo nome"
+            id="name-input"
+          />
+          <button type="button" id="save-btn">Salva</button>
+          <button type="button" id="delete-btn">Elimina</button>
+        </form>
+      </main>
+
+      <aside>
+        <h1>Counter con session.Storage()</h1>
+        <div class="counter-cont">
+          <h1 id="counter"></h1>
+        </div>
+      </aside>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>
