@@ -4,14 +4,14 @@ const nameInputField = document.getElementById("name-input");
 const saveButton = document.getElementById("save-btn");
 const deleteButton = document.getElementById("delete-btn");
 
-const previousNameShower = document.getElementById("previous-name");
+const previousName = document.getElementById("previous-name");
 
 const saveName = function () {
   const namevalue = nameInputField.value;
 
   localStorage.setItem("saved", namevalue);
 
-  previousNameShower.innerText = localStorage.getItem("saved");
+  previousName.innerText = localStorage.getItem("saved");
   nameInputField.value = "";
 };
 
@@ -21,7 +21,7 @@ const deleteItem = function () {
   if (localStorage.getItem("saved")) {
     localStorage.removeItem("saved");
     nameInputField.value = "";
-    previousNameShower.innerText = "";
+    previousName.innerText = "";
   } else {
     alert("non hai alcun nome salvato!");
   }
@@ -34,6 +34,7 @@ deleteButton.addEventListener("click", deleteItem);
 const counterText = document.getElementById("counter");
 
 let counter = sessionStorage.getItem("counter");
+
 const timefunction = function () {
   counter++;
 
